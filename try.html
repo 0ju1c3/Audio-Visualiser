@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Trying button</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <button onclick="Display()">Menu</button> 
+    <div style="display:none" id="Menu">
+      <input type="number" id="barHeight" value="bar-height">
+      <button onclick = 'getNum()'>Submit</button>
+      <button onclick = 'Hide()'>Hide</button>
+    </div>
+    <script>
+    function Display(){
+      let menu = document.getElementById('Menu')
+      menu.style.display = 'block'
+    }
+    function Hide(){
+      let menu = document.getElementById('Menu') 
+      menu.style.display = 'none'
+    }
+    function getNum(){
+      let barheight = document.getElementById("barHeight")
+      let num = barheight.value
+      console.log(num)
+    }
+    </script>
+  </body>
+</html>
